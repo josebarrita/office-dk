@@ -1,0 +1,1431 @@
+{
+ "Instrucciones": [
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "Este Excel es LA FUENTE de todo el contenido de la app. La página lo lee al cargar."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "Para publicar cambios: edita, guarda, y sube el archivo con git push (carpeta public/)."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "REGLAS:"
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "1. NO cambies los nombres de las hojas ni los encabezados de la fila 1."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "2. NO cambies las claves internas: roles (de, do, ds, qa, bi), niveles (Junior, Semisenior, Senior, Tech Lead, Specialist Lead)."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "3. Puedes editar libremente los TEXTOS (responsabilidades, misiones, descripciones...)."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "4. Colores en formato hex (#4017AA). Iconos: nombre exacto de lucide.dev (Database, Brain...)."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "5. En Flujos/TiposProyecto las listas van separadas por coma, sin espacios (de-ds,de-bi)."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "6. Si la app muestra error al cargar, revisa el último cambio hecho aquí."
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "HOJAS: Roles (identidad de cada rol) · Niveles (contenido de cada nivel) · Progresion (criterios de ascenso)"
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "NombresLideres (nombres de liderazgo por rol) · Flujos (flechas del grafo) · Laterales (movimientos)"
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "Agile (interacción con el AM) · AgileSeniority (expectativas por nivel) · RACI (matriz)"
+  },
+  {
+   "Modelo de Roles de Datos e IA — Fuente de datos": "TiposProyecto · Personas · Proyectos · Asignaciones (datos dummy que simulan la base de datos)"
+  }
+ ],
+ "Roles": [
+  {
+   "clave": "de",
+   "nombre": "Ingeniero de Datos",
+   "corto": "Ing. Datos",
+   "icono": "Database",
+   "color": "#48C1C1",
+   "color_suave": "rgba(72,193,193,0.12)",
+   "nube": "Compute + Storage + Networking",
+   "nube_corto": "Infraestructura base",
+   "mision": "Diseñar, construir y mantener pipelines y arquitecturas de datos a través de tecnologías cloud y herramientas de big data, para garantizar que los datos correctos lleguen al lugar correcto, con la calidad y oportunidad que las soluciones analíticas requieren. (Borrador al estilo del manual de Científico; validar con el manual propio del rol).",
+   "pos_x": "140",
+   "pos_y": "310"
+  },
+  {
+   "clave": "do",
+   "nombre": "Ingeniero DevOps / ML Eng",
+   "corto": "DevOps",
+   "icono": "ServerCog",
+   "color": "#4690B9",
+   "color_suave": "rgba(70,144,185,0.12)",
+   "nube": "CI/CD + Orquestación + Observabilidad",
+   "nube_corto": "Automatización y despliegue",
+   "mision": "Liderar el diseño y optimización de flujos de ETL, API REST y modelos ML a través de tecnologías cloud u on-premises, despliegue de servicios y monitoreo aplicando prácticas DevOps (MLOps, DataOps), para el gobierno de aplicaciones en entornos productivos escalables. (Misión tomada del perfil 'Experto en ML Engineer' del manual; niveles no-Senior son borrador).",
+   "pos_x": "400",
+   "pos_y": "130"
+  },
+  {
+   "clave": "ds",
+   "nombre": "Científico de Datos",
+   "corto": "Científico",
+   "icono": "Brain",
+   "color": "#4017AA",
+   "color_suave": "rgba(64,23,170,0.10)",
+   "nube": "Servicios de ML + IA gestionada",
+   "nube_corto": "Modelos, ML e IA generativa",
+   "mision": "Diseñar e implementar modelos de ML, deep learning, computer vision e IA generativa a partir de datos estructurados y no estructurados, para traducirlos en información valiosa y soluciones accionables que resuelvan problemáticas de negocio.",
+   "pos_x": "560",
+   "pos_y": "310"
+  },
+  {
+   "clave": "qa",
+   "nombre": "Ingeniero QA",
+   "corto": "QA",
+   "icono": "ShieldCheck",
+   "color": "#FF453C",
+   "color_suave": "rgba(255,69,60,0.10)",
+   "nube": "Testing + Validación + Quality Gates",
+   "nube_corto": "Aseguramiento de calidad",
+   "mision": "Garantizar la calidad de las soluciones de datos e IA a través del diseño y automatización de pruebas y quality gates, para asegurar que lo entregado cumple los criterios acordados con el cliente antes de llegar a producción. (Borrador al estilo del manual de Científico; validar con el manual propio del rol).",
+   "pos_x": "400",
+   "pos_y": "500"
+  },
+  {
+   "clave": "bi",
+   "nombre": "Analista de Datos (BI)",
+   "corto": "Analista BI",
+   "icono": "BarChart3",
+   "color": "#FF7E1D",
+   "color_suave": "rgba(255,126,29,0.10)",
+   "nube": "Capa de presentación / API Gateway",
+   "nube_corto": "Interfaz con el negocio",
+   "mision": "Desarrollar una visión integral del negocio a través del diseño de soluciones de BI, modelado de datos y visualizaciones que permitan proporcionar información estratégica para la toma de decisiones. (Borrador al estilo del manual de Científico; validar con el manual propio del rol).",
+   "pos_x": "850",
+   "pos_y": "310"
+  }
+ ],
+ "Niveles": [
+  {
+   "rol": "de",
+   "nivel": "Junior",
+   "responsabilidades": "Apoyar el desarrollo de pipelines de datos básicos bajo supervisión. Ejecutar procesos ETL simples ya diseñados. Limpiar y validar datasets. Documentar procesos técnicos. Resolver bugs de baja complejidad. Garantizar oportunamente los reportes de tiempo. Cumplir las funciones asignadas por su líder inmediato.",
+   "habilidades": "Python y SQL básico-intermedio. Git. Conceptos de ETL. Linux básico. Certificación nivel I de datos en alguna nube (AWS/GCP/Azure/Databricks, deseable). Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo. Decisiones diarias de ejecución siguiendo estándares. Reporta al Líder Técnico. Pipelines pequeños en desarrollo, siempre con revisión. ~1 año de experiencia.",
+   "autonomia": "Baja. Ejecuta tareas asignadas con calidad. Autogestión incipiente. Check-ins frecuentes con su mentor.",
+   "kpis": "Pipelines completados por sprint. Bugs resueltos. Documentación entregada. (KPIs derivados; validar con el manual del rol).",
+   "contribucion": "Participa activamente en el equipo y comparte información. Usa los agilizadores y frameworks existentes. Mantiene actitud de aprendizaje continuo."
+  },
+  {
+   "rol": "de",
+   "nivel": "Semisenior",
+   "responsabilidades": "Diseñar e implementar pipelines ETL/ELT completos de complejidad media. Optimizar queries y procesos existentes. Dar soporte técnico a Científicos y Analistas. Hacer debugging en producción no crítica. Mentorear Juniors. Identificar nuevas necesidades del cliente. Reportar tiempos oportunamente.",
+   "habilidades": "Python y SQL avanzado. Docker. Spark básico. Bases relacionales y NoSQL. Airflow/Prefect. CI/CD básico. Certificación nivel 1 y 2 de datos en alguna nube. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo con más decisión. Reporta al Especialista en Data. Se relaciona con negocio y con marketing/ventas (apoyo en propuestas comerciales). ~2 años de experiencia.",
+   "autonomia": "Media. Recibe el 'qué' y define el 'cómo'. Decide la programación de sus actividades y la resolución de problemas operativos.",
+   "kpis": "Performance de pipelines. Calidad de datos. Tiempo de resolución de incidentes. (KPIs derivados).",
+   "contribucion": "Apoya en la elaboración de propuestas comerciales (PREVENTAS). Crea agilizadores (scripts, plantillas) y da charlas internas. Investiga nuevas herramientas (INNOVACIÓN)."
+  },
+  {
+   "rol": "de",
+   "nivel": "Senior",
+   "responsabilidades": "Diseñar la arquitectura de la plataforma de datos. Optimizar sistemas a escala. Liderar técnicamente iniciativas grandes y definir estándares de ingeniería de datos. Convertir la comprensión del negocio en proyectos definidos (objetivos, cronograma, alcance). Presentar a audiencias técnicas y no técnicas. Desarrollar las capacidades del área junto a líderes y pares. Monitorear el mercado para identificar nuevas tecnologías.",
+   "habilidades": "Spark a escala. Arquitectura de datos (lakehouse). Cloud avanzado. Kubernetes. Streaming (Kafka). IaC (Terraform). Certificación nivel 1, 2 y 3 en nube + MLOps/DevOps (deseable). Inglés B2-C1.",
+   "alcance": "Rol operativo senior. Presenta a directores de área y product owners. Reporta al Especialista en Data. Producción crítica. ~3 años de experiencia.",
+   "autonomia": "Alta. Establece etapas, plazos y recursos de los proyectos que acompaña. Resuelve problemas complejos de forma autónoma.",
+   "kpis": "Uptime y latencia en SLA. Reducción de costos cloud. Arquitecturas adoptadas. (KPIs derivados).",
+   "contribucion": "Elabora propuestas comerciales (PREVENTAS). Crea frameworks reutilizables. Monitorea el mercado e impulsa INNOVACIÓN. Transfiere conocimiento (CHARLAS)."
+  },
+  {
+   "rol": "de",
+   "nivel": "Tech Lead",
+   "responsabilidades": "Velar por los estándares técnicos de ingeniería de datos en los proyectos end-to-end. Revisar la viabilidad técnica de las estimaciones junto al Agile Manager. Apoyar retos técnicos del equipo y la asignación de consultores. Liderar preventas si es requerido. Gestionar con los Agile Managers el cumplimiento de alcances. Gestionar evaluación de desempeño y 'Conversemos'. Anticipar riesgos. Transferir conocimiento.",
+   "habilidades": "Administración de proyectos. Certificaciones avanzadas en nube. Arquitectura empresarial. FinOps/DataOps. Liderazgo y manejo de cliente. Gestión de equipos ágiles.",
+   "alcance": "Rol táctico. Le reportan ingenieros de datos. Se relaciona con Data, Talento Humano, Procesos y Comercial. ~4 años de experiencia.",
+   "autonomia": "Muy alta. Decide con desarrollo sistemático de opciones considerando recursos e impacto en el negocio.",
+   "kpis": "Implementación satisfactoria de proyectos en calidad y tiempo. Desarrollo y retención del equipo. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS. Promueve aprendizaje y transfiere conocimiento (CHARLAS, FRAMEWORKS). Impulsa nuevas tecnologías y AGILIZADORES."
+  },
+  {
+   "rol": "de",
+   "nivel": "Specialist Lead",
+   "responsabilidades": "Dar lineamientos técnicos y estratégicos de la plataforma de datos. Participar en la planeación estratégica del área y asignar prioridades. Gestionar alcances, costos y rentabilidad con los Agile Managers. Tomar decisiones estratégicas de plataformas y arquitecturas de datos. Definir estandarización y mejores prácticas. Promover innovación que apalanca la estrategia. Anticipar riesgos en clientes críticos.",
+   "habilidades": "Estrategia de plataforma de datos. Gobernanza empresarial. Arquitecturas cloud. DevOps/DataOps/IaC. Gestión de equipos ágiles. Influencia C-level.",
+   "alcance": "Rol estratégico. Le reportan el Líder Técnico y los ingenieros. Reporta al Gerente de Data y IA. Se relaciona con todas las áreas. ~5 años de experiencia integral.",
+   "autonomia": "Total dentro de su dominio. Decide sobre plataformas, prioridades y estrategia del área.",
+   "kpis": "ROI de iniciativas de datos. Adopción de estándares. Rentabilidad de proyectos. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS estratégicas. Define estandarización (FRAMEWORKS). Promueve procesos de INNOVACIÓN. Desarrolla al equipo (CHARLAS)."
+  },
+  {
+   "rol": "do",
+   "nivel": "Junior",
+   "responsabilidades": "Apoyar pipelines de CI/CD existentes. Ejecutar despliegues guiados. Configurar monitoreo básico y atender alertas simples. Documentar runbooks. Realizar pruebas de integración básicas. Garantizar reportes de tiempo. Cumplir funciones asignadas por su líder inmediato.",
+   "habilidades": "Git y CI/CD básico. Docker. Linux. Scripting (bash/Python). Nociones de cloud. Curso de IaC (deseable). Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo. Ambientes de desarrollo y staging. Cambios acotados con revisión. Reporta al Líder Técnico. ~1 año de experiencia.",
+   "autonomia": "Baja. Tareas asignadas con acompañamiento cercano en cambios a producción.",
+   "kpis": "Despliegues asistidos sin incidentes. Alertas atendidas a tiempo. Runbooks documentados. (KPIs derivados).",
+   "contribucion": "Usa los agilizadores y plantillas de CI/CD del equipo. Asiste a charlas y documenta lo aprendido."
+  },
+  {
+   "rol": "do",
+   "nivel": "Semisenior",
+   "responsabilidades": "Implementar pipelines de integración y entrega continua (CI/CD). Apoyar la configuración del DevOps. Implementar configuraciones de service connections, extensiones y agent pools. Realizar pruebas de integración. Implementar mecanismos de monitoreo. Apoyar el despliegue de modelos con técnicas de MLOps. Identificar necesidades del cliente.",
+   "habilidades": "CI/CD avanzado. Docker y orquestación (Kubernetes básico). YML y Terraform. Cloud (AWS/GCP/Azure). Monitoreo. Cursos/certificaciones DevOps. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo con más decisión. Producción no crítica. Reporta al Especialista en Data. Apoya propuestas comerciales. ~2 años de experiencia.",
+   "autonomia": "Media. Recibe el objetivo y define la implementación de la automatización.",
+   "kpis": "Lead time de despliegue. Tasa de fallos. Cobertura de monitoreo. (KPIs derivados).",
+   "contribucion": "Crea agilizadores de despliegue (plantillas, pipelines reutilizables) y da charlas de prácticas DevOps. Apoya PREVENTAS."
+  },
+  {
+   "rol": "do",
+   "nivel": "Senior",
+   "responsabilidades": "Liderar la implementación, operacionalización y monitoreo de los modelos analíticos validando flujos de MLOps. Definir e implementar pipelines de CI/CD para acelerar el ciclo de vida de desarrollo. Implementar infraestructura como código de servicios ML/IA y sus roles. Definir, desarrollar y validar aplicaciones y servicios API REST. Implementar técnicas de DevOps para monitoreo y gobierno de proyectos Big Data. Comprender el negocio para definir soluciones conforme a recursos, tiempo y alcance. Liderar preventas si es requerido.",
+   "habilidades": "Gobierno de modelos analíticos. SQL y Python (requerido). Docker. YML y Terraform. Databricks, container apps/instances, functions, webapps, Kubernetes. Certificaciones en analítica y cloud (requerido). IaC (requerido). Inglés B2-C1.",
+   "alcance": "Rol operativo senior (perfil 'Experto en ML Engineer' del manual). Reporta al Especialista en Data. Producción crítica. ~3 años de experiencia.",
+   "autonomia": "Alta. Decide la programación de sus actividades y la resolución de problemas operativos complejos.",
+   "kpis": "Confiabilidad de despliegues. MTTR. Gobierno de modelos en producción. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS si es requerido. Promueve el aprendizaje del equipo (CHARLAS). Crea golden paths y plantillas (FRAMEWORKS, AGILIZADORES)."
+  },
+  {
+   "rol": "do",
+   "nivel": "Tech Lead",
+   "responsabilidades": "Velar por los estándares técnicos de plataforma en los proyectos. Apoyar retos técnicos de despliegue del equipo. Gestionar la asignación de consultores. Liderar preventas si es requerido. Gestionar con los Agile Managers el cumplimiento de alcances. Gestionar evaluación de desempeño. Anticipar riesgos de infraestructura. Transferir conocimiento.",
+   "habilidades": "Estrategia de plataforma. SRE. Vendor management de cloud. FinOps. Gestión de personas técnicas. Gestión de equipos ágiles.",
+   "alcance": "Rol táctico. Le reportan ingenieros DevOps. Se relaciona con Data, Talento Humano, Procesos y Comercial. ~4 años de experiencia. (Borrador).",
+   "autonomia": "Muy alta. Responde por la confiabilidad y el costo de la plataforma de los proyectos que acompaña.",
+   "kpis": "Confiabilidad global (SLOs). Costo de infraestructura optimizado. Capacidad del equipo. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS técnicas. Vuelve estándar los mejores agilizadores y FRAMEWORKS. Impulsa INNOVACIÓN de automatización."
+  },
+  {
+   "rol": "do",
+   "nivel": "Specialist Lead",
+   "responsabilidades": "Definir la estrategia de plataforma e infraestructura del área. Tomar decisiones estratégicas de tecnologías de despliegue y gobierno. Definir estandarización y mejores prácticas DevOps/MLOps. Gestionar rentabilidad de la operación con los Agile Managers. Promover innovación de plataforma que apalanca la estrategia.",
+   "habilidades": "Visión estratégica de plataforma. Gobernanza de confiabilidad y seguridad. Multi-cloud. Influencia C-level. Gestión de equipos.",
+   "alcance": "Rol estratégico. Reporta al Gerente de Data y IA. Se relaciona con todas las áreas. ~5 años de experiencia integral. (Borrador).",
+   "autonomia": "Total dentro de su dominio. Decide sobre plataformas y estrategia de infraestructura.",
+   "kpis": "Madurez de plataforma. ROI de inversión en infra. Adopción de estándares. (KPIs derivados).",
+   "contribucion": "PREVENTAS estratégicas de plataforma. Estandarización (FRAMEWORKS). INNOVACIÓN de infraestructura a nivel de compañía."
+  },
+  {
+   "rol": "ds",
+   "nivel": "Junior",
+   "responsabilidades": "Apoya el diseño de modelos analíticos, ML, computer vision e IA. Implementa y entrena modelos básicos (clasificación, clustering, optimización, series de tiempo, pronóstico, IA generativa). Realiza análisis exploratorio (EDA). Trabaja con equipos de negocio. Identifica documentos para arquitecturas RAG. Reporta tiempos de trabajo.",
+   "habilidades": "Python o R (SQL deseable). Entornos como Jupyter/RStudio. Análisis exploratorio (EDA). Certificación nivel I de ciencia de datos en alguna nube (AWS/GCP/Azure/Databricks, deseable). Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo. Decisiones diarias de ejecución siguiendo estándares. Reporta al Líder Técnico. Acompañamiento del equipo. ~1 año de experiencia.",
+   "autonomia": "Baja. Ejecuta tareas con calidad bajo estándares establecidos. Autogestión incipiente.",
+   "kpis": "Modelos básicos entregados. Calidad de los EDA. Cumplimiento de reportes de tiempo. Aprendizaje continuo demostrado. (KPIs derivados; el manual no los fija explícitamente).",
+   "contribucion": "Participa activamente en el equipo: aporta ideas y comparte información. Mantiene actitud de aprendizaje e investigación (mejora continua, creatividad)."
+  },
+  {
+   "rol": "ds",
+   "nivel": "Semisenior",
+   "responsabilidades": "Implementa y entrena modelos de ML e IA generativa. Apoya el despliegue en producción con técnicas de DevOps y MLOps. Presenta resultados a audiencias técnicas. Investiga tendencias. Define el patrón de diseño y arquitectura de software de agentes IA. Implementa técnicas de Chunk y generación de Embeddings. Crea APIs/módulos de IA e integra con backend/frontend. Evalúa la calidad de la IA (precisión, relevancia, groundedness, latencia y costo).",
+   "habilidades": "Python o R, SQL (Pyspark deseable). Implementación en producción con MLOps/DevOps (deseable). EDA. Certificación nivel 1 y 2 de ciencia de datos en alguna nube. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo con más decisión. Reporta al Especialista en Data. Se relaciona con negocio y con marketing/ventas (apoyo en propuestas comerciales). ~2 años de experiencia.",
+   "autonomia": "Media. Decide programación de actividades y resolución de problemas operativos. Autogestión sólida.",
+   "kpis": "Modelos en producción. Calidad de la IA (precisión, relevancia, groundedness, latencia, costo). Apoyo efectivo a propuestas comerciales. (KPIs derivados del manual).",
+   "contribucion": "Apoya en la elaboración de propuestas comerciales (PREVENTAS). Promueve el aprendizaje del equipo (CHARLAS). Investiga y evalúa nuevas herramientas y metodologías (INNOVACIÓN)."
+  },
+  {
+   "rol": "ds",
+   "nivel": "Senior",
+   "responsabilidades": "Implementa, entrena y mejora modelos. Diseña e implementa modelos de ML en producción con DevOps (IaC) y MLOps (CI/CD). Convierte la comprensión del negocio en proyectos definidos (objetivos, cronograma, alcance). Presenta resultados a audiencias técnicas y no técnicas. Domina arquitecturas de IA generativa, RAG, Chunk y Embeddings. Desarrolla aplicaciones en contenedores. Desarrolla las capacidades analíticas del área junto a líderes y pares.",
+   "habilidades": "Python o R, SQL y Pyspark. Certificación nivel 1, 2 y 3 de ciencia de datos en nube (niveles profesionales) + certificación de MLOps/DevOps (deseable). EDA. Desarrollo en contenedores. Inglés B2-C1.",
+   "alcance": "Rol operativo senior. Presenta a directores de área y product owners. Reporta al Especialista en Data. Se relaciona con marketing/ventas (propuestas comerciales). ~3 años de experiencia.",
+   "autonomia": "Alta. Establece etapas, acciones, plazos y recursos de los proyectos que acompaña. Resuelve problemas complejos de forma autónoma.",
+   "kpis": "Modelos complejos en producción (con MLOps/CI-CD). Proyectos definidos y entregados en tiempo. Adopción por audiencias técnicas y no técnicas. (KPIs derivados del manual).",
+   "contribucion": "Elabora propuestas comerciales (PREVENTAS). Monitorea el mercado para identificar nuevas tecnologías y tendencias (INNOVACIÓN). Desarrolla las capacidades analíticas del área y transfiere conocimiento (CHARLAS, FRAMEWORKS)."
+  },
+  {
+   "rol": "ds",
+   "nivel": "Tech Lead",
+   "responsabilidades": "Vela por los estándares técnicos en el desarrollo end-to-end de los proyectos. Revisa la viabilidad técnica de las estimaciones junto al Agile Manager. Brinda apoyo en retos técnicos del equipo. Apoya la asignación de consultores. Lidera preventas para garantizar alcance claro. Gestiona con los Agile Managers el cumplimiento de los proyectos. Realiza selección de personal y proyecciones de capacidad. Gestiona la evaluación de desempeño y los 'Conversemos'. Anticipa riesgos. Transfiere conocimiento al equipo.",
+   "habilidades": "Administración de proyectos (habilidades gerenciales). Certificaciones avanzadas en nube. Python/SQL, preferible C#/C++ y frameworks IA/ML. Liderazgo y manejo de cliente. Gestión de equipos ágiles. MLOps/DevOps. Postgrado afín a ciencia de datos.",
+   "alcance": "Rol táctico. Le reportan los científicos de datos. Reporta al Especialista en Data. Se relaciona con Data, Talento Humano, Procesos y Comercial. ~4 años de experiencia.",
+   "autonomia": "Muy alta. Toma decisiones con desarrollo sistemático de opciones, considerando recursos e impacto en el negocio.",
+   "kpis": "Implementación satisfactoria de proyectos en calidad y tiempo. Desarrollo y retención del equipo. Cumplimiento de alcances con los Agile Managers. (KPIs derivados del manual).",
+   "contribucion": "Lidera PREVENTAS para delimitar nuevos proyectos. Promueve el aprendizaje y transfiere conocimiento (CHARLAS, FRAMEWORKS). Monitorea el mercado e impulsa nuevas tecnologías (INNOVACIÓN). Apoya AGILIZADORES de metodología ágil en el equipo."
+  },
+  {
+   "rol": "ds",
+   "nivel": "Specialist Lead",
+   "responsabilidades": "Da lineamientos técnicos y toma decisiones estratégicas de ejecución de los proyectos. Diseña soluciones de analítica. Participa en la planeación estratégica del área y asigna prioridades de proyectos. Gestiona con los Agile Managers alcances, costos y rentabilidad. Toma decisiones estratégicas de plataformas, arquitecturas y frameworks. Define estandarización y mejores prácticas de desarrollo. Promueve procesos de innovación que apalancan la estrategia de la compañía. Anticipa riesgos en clientes críticos.",
+   "habilidades": "Administración de proyectos. Certificaciones avanzadas en nube. Python/SQL/Pyspark. Ingeniería de datos. ML/IA, series de tiempo, visión por computador. Arquitecturas cloud. DevOps/MLOps/IaC. Gestión de equipos ágiles. Inglés B2-C1.",
+   "alcance": "Rol estratégico. Le reportan el Líder Técnico y los científicos. Reporta al Gerente de Data y IA. Se relaciona con todas las áreas. ~5 años de experiencia integral.",
+   "autonomia": "Total dentro de su dominio. Decide sobre plataformas, prioridades y estrategia del área.",
+   "kpis": "Rentabilidad y cumplimiento de los proyectos. Estandarización y mejores prácticas adoptadas. Innovación que apalanca la estrategia. Satisfacción del cliente crítico. (KPIs derivados del manual).",
+   "contribucion": "Lidera PREVENTAS estratégicas. Define estandarización y mejores prácticas (FRAMEWORKS). Promueve procesos de INNOVACIÓN para apalancar la estrategia y generar nuevas capacidades. Transfiere conocimiento y desarrolla al equipo (CHARLAS)."
+  },
+  {
+   "rol": "qa",
+   "nivel": "Junior",
+   "responsabilidades": "Ejecutar casos de prueba definidos. Reportar bugs con claridad y evidencias. Hacer pruebas manuales y de regresión. Documentar resultados. Garantizar reportes de tiempo. Cumplir funciones asignadas por su líder inmediato.",
+   "habilidades": "Fundamentos de testing. Diseño básico de casos. Gestión de bugs (Jira). SQL básico para validar datos. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo. Pruebas funcionales de bajo riesgo en desarrollo y staging, con revisión. Reporta al Líder Técnico. ~1 año de experiencia.",
+   "autonomia": "Baja. Casos y criterios definidos por un Senior. Acompañamiento cercano.",
+   "kpis": "Casos ejecutados por sprint. Bugs reproducibles reportados. (KPIs derivados).",
+   "contribucion": "Usa los frameworks de pruebas del equipo. Asiste a charlas y documenta casos de referencia."
+  },
+  {
+   "rol": "qa",
+   "nivel": "Semisenior",
+   "responsabilidades": "Diseñar casos de prueba completos. Automatizar pruebas de UI y API. Definir criterios de aceptación con el equipo. Realizar pruebas de integración. Validar calidad de datos y de modelos ML/IA básicos. Identificar necesidades del cliente.",
+   "habilidades": "Automatización (Playwright/Selenium/Cypress). Pruebas de API. CI para pruebas. SQL intermedio. Pruebas de datos y modelos básicas. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo con más decisión. Suites de un proyecto completo. Reporta al Especialista en Data. Apoya propuestas comerciales. ~2 años de experiencia.",
+   "autonomia": "Media. Recibe el objetivo de calidad y define la estrategia de pruebas de su alcance.",
+   "kpis": "Cobertura automatizada. Bugs escapados a producción. Estabilidad de la suite. (KPIs derivados).",
+   "contribucion": "Crea agilizadores de testing (frameworks de automatización, datos de prueba) y da charlas de calidad. Apoya PREVENTAS."
+  },
+  {
+   "rol": "qa",
+   "nivel": "Senior",
+   "responsabilidades": "Diseñar la estrategia de calidad y los quality gates de los proyectos. Definir estándares de testing y automatización. Liderar la validación de sistemas complejos, incluida la evaluación de modelos ML/IA (precisión, relevancia, groundedness, latencia, costo — en línea con el manual del Científico). Comprender el negocio para dimensionar el esfuerzo de calidad. Liderar preventas si es requerido. Desarrollar capacidades del área junto a líderes y pares.",
+   "habilidades": "Estrategia de QA. Automatización avanzada. Performance y seguridad. Quality gates en CI/CD. Evaluación de modelos ML/IA. Shift-left. Inglés B2-C1.",
+   "alcance": "Rol operativo senior. Calidad de sistemas críticos. Presenta a directores y product owners. Reporta al Especialista en Data. ~3 años de experiencia.",
+   "autonomia": "Alta. Define estándares y estrategia de calidad de los proyectos que acompaña.",
+   "kpis": "Defectos escapados < umbral. Cobertura efectiva. Calidad percibida por el cliente. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS con argumentos de calidad. Crea FRAMEWORKS de calidad. Impulsa INNOVACIÓN de testing. Da CHARLAS."
+  },
+  {
+   "rol": "qa",
+   "nivel": "Tech Lead",
+   "responsabilidades": "Gestionar la práctica de calidad en los proyectos. Apoyar retos de calidad del equipo. Gestionar asignación de consultores QA. Liderar preventas si es requerido. Gestionar con los Agile Managers el cumplimiento con calidad. Gestionar evaluación de desempeño. Anticipar riesgos de calidad. Transferir conocimiento.",
+   "habilidades": "Estrategia de calidad. Gestión de personas. Procesos de QA enterprise. Manejo de cliente. Gestión de equipos ágiles.",
+   "alcance": "Rol táctico. Le reportan ingenieros QA. Se relaciona con Data, Talento Humano, Procesos y Comercial. ~4 años de experiencia. (Borrador).",
+   "autonomia": "Muy alta. Responde por la calidad de los proyectos que acompaña.",
+   "kpis": "Calidad global de entregas. Madurez de QA del equipo. Capacidad y retención. (KPIs derivados).",
+   "contribucion": "PREVENTAS con criterio de calidad. Estandariza FRAMEWORKS de testing. Impulsa INNOVACIÓN y CHARLAS."
+  },
+  {
+   "rol": "qa",
+   "nivel": "Specialist Lead",
+   "responsabilidades": "Definir la estrategia de calidad del área a nivel estratégico. Establecer la gobernanza de calidad. Tomar decisiones de herramientas y prácticas. Definir estandarización. Gestionar rentabilidad con calidad junto a los Agile Managers. Promover innovación de calidad que apalanca la estrategia.",
+   "habilidades": "Visión estratégica de calidad. Gobernanza. Dirección de prácticas. Influencia C-level.",
+   "alcance": "Rol estratégico. Reporta al Gerente de Data y IA. Se relaciona con todas las áreas. ~5 años de experiencia. (Borrador).",
+   "autonomia": "Total dentro de su dominio.",
+   "kpis": "Madurez de calidad organizacional. Costo de la mala calidad reducido. (KPIs derivados).",
+   "contribucion": "PREVENTAS estratégicas. Estandarización (FRAMEWORKS). INNOVACIÓN de calidad a nivel de compañía."
+  },
+  {
+   "rol": "bi",
+   "nivel": "Junior",
+   "responsabilidades": "Construir reportes operacionales básicos. Crear dashboards simples a partir de especificaciones. Responder consultas de datos de stakeholders. Mantener reportes existentes. Documentar fuentes y métricas. Garantizar reportes de tiempo. Cumplir funciones asignadas por su líder inmediato.",
+   "habilidades": "SQL básico. Power BI o Tableau fundamentales. Excel avanzado. Comprensión básica del negocio. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo. Reportes departamentales con especificaciones claras y revisión. Reporta al Líder Técnico. ~1 año de experiencia.",
+   "autonomia": "Baja. Requerimientos detallados y validación de un SS/Senior.",
+   "kpis": "Reportes entregados por sprint. Tiempo de respuesta. Errores detectados en QA. (KPIs derivados).",
+   "contribucion": "Usa plantillas y frameworks de dashboards del equipo. Asiste a charlas y documenta métricas."
+  },
+  {
+   "rol": "bi",
+   "nivel": "Semisenior",
+   "responsabilidades": "Diseñar dashboards analíticos completos. Modelar datos para BI (esquemas estrella, métricas). Optimizar performance. Traducir preguntas vagas en análisis concretos. Presentar resultados a audiencias técnicas. Identificar necesidades del cliente.",
+   "habilidades": "SQL avanzado. Power BI/Tableau avanzado (DAX, LOD). Modelado dimensional. Estadística descriptiva. Storytelling. Inglés B2-C1 deseable.",
+   "alcance": "Rol operativo con más decisión. Dashboards de un área completa. Reporta al Especialista en Data. Apoya propuestas comerciales. ~2 años de experiencia.",
+   "autonomia": "Media. Recibe la pregunta de negocio y define la solución analítica.",
+   "kpis": "Performance de dashboards. Precisión. Usuarios activos. Insights que generaron acción. (KPIs derivados).",
+   "contribucion": "Apoya PREVENTAS. Crea agilizadores de BI (plantillas, librerías de métricas) y da CHARLAS internas."
+  },
+  {
+   "rol": "bi",
+   "nivel": "Senior",
+   "responsabilidades": "Diseñar la arquitectura de la plataforma BI y la capa semántica. Definir el catálogo de métricas corporativas. Liderar iniciativas cross-área y ser puente entre negocio y roles técnicos. Convertir la comprensión del negocio en proyectos definidos. Presentar a audiencias técnicas y no técnicas. Monitorear el mercado (BI, calidad de datos — en línea con el manual del Científico). Desarrollar capacidades del área.",
+   "habilidades": "BI enterprise. Data warehousing. Capa semántica. Python para análisis. Data governance funcional. Influencia con stakeholders. Inglés B2-C1.",
+   "alcance": "Rol operativo senior. Plataforma BI corporativa. Presenta a directores y product owners. Reporta al Especialista en Data. ~3 años de experiencia.",
+   "autonomia": "Alta. Define estándares analíticos y prioriza el backlog de su dominio.",
+   "kpis": "Time-to-insight. Adopción de analytics. Single source of truth. (KPIs derivados).",
+   "contribucion": "Elabora PREVENTAS. Crea FRAMEWORKS de BI. Impulsa INNOVACIÓN de visualización. Transfiere conocimiento (CHARLAS)."
+  },
+  {
+   "rol": "bi",
+   "nivel": "Tech Lead",
+   "responsabilidades": "Velar por los estándares técnicos de los proyectos de BI end-to-end. Apoyar retos analíticos del equipo. Gestionar asignación de consultores. Liderar preventas si es requerido. Gestionar con los Agile Managers el cumplimiento de alcances. Gestionar evaluación de desempeño. Anticipar riesgos. Transferir conocimiento.",
+   "habilidades": "Estrategia de BI. Data governance. Gestión de equipos. Change management. Manejo de cliente. Gestión de equipos ágiles.",
+   "alcance": "Rol táctico. Le reportan analistas BI. Se relaciona con Data, Talento Humano, Procesos y Comercial. ~4 años de experiencia. (Borrador).",
+   "autonomia": "Muy alta. Responde por la confiabilidad y adopción del ecosistema analítico de sus proyectos.",
+   "kpis": "Delivery con calidad. Madurez analítica. Capacidad del equipo. (KPIs derivados).",
+   "contribucion": "Lidera PREVENTAS con storytelling. Estandariza FRAMEWORKS de BI. Impulsa INNOVACIÓN y CHARLAS."
+  },
+  {
+   "rol": "bi",
+   "nivel": "Specialist Lead",
+   "responsabilidades": "Definir la estrategia de decisiones basadas en datos del área. Liderar la transformación data-driven. Integrar analytics en los procesos de decisión. Definir estandarización y prioridades estratégicas. Gestionar rentabilidad con los Agile Managers. Promover innovación analítica que apalanca la estrategia.",
+   "habilidades": "Estrategia de BI corporativa. Change management avanzado. Visión de negocio profunda. Influencia C-level.",
+   "alcance": "Rol estratégico. Reporta al Gerente de Data y IA. Se relaciona con todas las áreas. ~5 años de experiencia. (Borrador).",
+   "autonomia": "Total dentro de su dominio. Asesor de C-level.",
+   "kpis": "Calidad y velocidad de decisiones. Madurez data-driven. (KPIs derivados).",
+   "contribucion": "PREVENTAS estratégicas. Estandarización (FRAMEWORKS). INNOVACIÓN analítica a nivel de compañía."
+  }
+ ],
+ "Progresion": [
+  {
+   "rol": "de",
+   "hacia": "Semisenior",
+   "tiempo": "~1 → 2 años",
+   "tecnicas": "Diseña pipelines completos sin supervisión. Domina su stack. Resuelve incidentes solo.",
+   "blandas": "Autogestión sólida. Comunica avances con claridad. Mentorea informalmente.",
+   "contribucion": "Genera un agilizador y empieza a apoyar propuestas comerciales.",
+   "criterios": "Pipelines completos sin supervisión. Domina su stack. Resuelve incidentes. Apoya preventas.",
+   "cambio": "De ejecutar tareas asignadas → a diseñar soluciones completas dentro de su pipeline."
+  },
+  {
+   "rol": "de",
+   "hacia": "Senior",
+   "tiempo": "~2 → 3 años",
+   "tecnicas": "Decisiones arquitectónicas correctas. Producción crítica con calma. Define proyectos end-to-end.",
+   "blandas": "Referente técnico. Presenta a cualquier audiencia. Desarrolla capacidades del área.",
+   "contribucion": "Elabora propuestas comerciales. Crea frameworks. Impulsa innovación.",
+   "criterios": "Arquitecturas exitosas. Impacto cross-team. Referente técnico. Contribuye a preventas e innovación.",
+   "cambio": "De ejecutor de soluciones → a arquitecto. Su impacto se mide en sistemas, no en tareas."
+  },
+  {
+   "rol": "de",
+   "hacia": "Tech Lead",
+   "tiempo": "~3 → 4 años (cambio de carrera)",
+   "tecnicas": "Visión técnica end-to-end. Domina ágiles, cloud y FinOps.",
+   "blandas": "Liderazgo: delegación, desarrollo de personas, influencia. Manejo de cliente.",
+   "contribucion": "Lidera preventas. Impulsa agilizadores en el equipo.",
+   "criterios": "Liderazgo demostrado. Manejo de cliente. Gestión con Agile Managers. Cambio de carrera, no obligatorio.",
+   "cambio": "De manos en el teclado → a velar por los estándares técnicos del proyecto end-to-end y multiplicar al equipo."
+  },
+  {
+   "rol": "de",
+   "hacia": "Specialist Lead",
+   "tiempo": "~4 → 5 años",
+   "tecnicas": "Decisiones estratégicas de plataforma. Gobernanza a nivel experto.",
+   "blandas": "Liderazgo estratégico. Influencia con clientes críticos y C-level.",
+   "contribucion": "Preventas estratégicas. Estandarización e innovación de área.",
+   "criterios": "Resultados sostenidos. Planeación estratégica. Gestión de rentabilidad. Innovación promovida.",
+   "cambio": "De liderar un equipo → a definir la estrategia de datos de la organización."
+  },
+  {
+   "rol": "do",
+   "hacia": "Semisenior",
+   "tiempo": "~1 → 2 años",
+   "tecnicas": "Implementa CI/CD completo. Configura monitoreo y service connections sin supervisión.",
+   "blandas": "Comunica el estado de despliegues con claridad. Escala incidentes a tiempo.",
+   "contribucion": "Genera un agilizador de despliegue reutilizable.",
+   "criterios": "Pipelines CI/CD completos. Pruebas de integración. Monitoreo implementado.",
+   "cambio": "De ejecutar despliegues guiados → a automatizar de extremo a extremo dentro de su alcance."
+  },
+  {
+   "rol": "do",
+   "hacia": "Senior",
+   "tiempo": "~2 → 3 años",
+   "tecnicas": "Lidera MLOps end-to-end: IaC, APIs REST, gobierno de modelos en producción.",
+   "blandas": "Comprende el negocio para dimensionar soluciones. Referente de confiabilidad.",
+   "contribucion": "Lidera preventas si es requerido. Crea golden paths.",
+   "criterios": "Operacionalización de modelos validada. IaC de servicios ML/IA. APIs REST en producción. (Perfil 'Experto en ML Engineer').",
+   "cambio": "De automatizar tareas → a liderar el ciclo de vida completo de los desarrollos en producción."
+  },
+  {
+   "rol": "do",
+   "hacia": "Tech Lead",
+   "tiempo": "~3 → 4 años (cambio de carrera)",
+   "tecnicas": "Visión de plataforma de los proyectos. SRE y FinOps.",
+   "blandas": "Liderazgo: delegación, desarrollo de personas. Manejo de cliente.",
+   "contribucion": "Preventas técnicas. Estandariza agilizadores del equipo.",
+   "criterios": "Gestión demostrada. Cultura de confiabilidad. Cambio de carrera, no obligatorio.",
+   "cambio": "De liderar la técnica → a gestionar la plataforma y multiplicar al equipo."
+  },
+  {
+   "rol": "do",
+   "hacia": "Specialist Lead",
+   "tiempo": "~4 → 5 años",
+   "tecnicas": "Estrategia de infraestructura a años. Multi-cloud y gobernanza.",
+   "blandas": "Influencia ejecutiva. Resultados sostenidos.",
+   "contribucion": "Innovación y preventas de plataforma a nivel estratégico.",
+   "criterios": "Resultados sostenidos. Influencia C-level. Estrategia probada.",
+   "cambio": "De dirigir la plataforma → a definir la estrategia de infraestructura de la organización."
+  },
+  {
+   "rol": "ds",
+   "hacia": "Semisenior",
+   "tiempo": "~1 → 2 años",
+   "tecnicas": "Implementa modelos de ML e IA generativa. Apoya despliegue con MLOps/DevOps. Maneja agentes IA, Chunk y Embeddings. Evalúa calidad de IA.",
+   "blandas": "Autogestión sólida. Presenta resultados a audiencias técnicas con claridad. Escucha y acompaña al equipo.",
+   "contribucion": "Empieza a apoyar propuestas comerciales (preventas) e investiga nuevas tecnologías.",
+   "criterios": "Implementa modelos en producción con apoyo de MLOps. Domina agentes IA, RAG y embeddings. Evalúa calidad de IA. Apoya preventas.",
+   "cambio": "De apoyar el diseño de modelos → a implementar soluciones de ML e IA completas y evaluarlas con rigor."
+  },
+  {
+   "rol": "ds",
+   "hacia": "Senior",
+   "tiempo": "~2 → 3 años",
+   "tecnicas": "Diseña ML en producción con IaC y CI/CD. Domina IA generativa, RAG y contenedores. Convierte negocio en proyectos definidos.",
+   "blandas": "Presenta a audiencias técnicas y NO técnicas. Desarrolla capacidades analíticas del área. Referente del equipo.",
+   "contribucion": "Elabora propuestas comerciales. Monitorea el mercado e impulsa innovación. Transfiere conocimiento.",
+   "criterios": "Diseña ML en producción con DevOps/MLOps. Domina IA generativa a profundidad. Define proyectos end-to-end. Presenta a cualquier audiencia. Contribuye a preventas e innovación.",
+   "cambio": "De implementar modelos → a diseñar soluciones productivas completas y traducir negocio en proyectos."
+  },
+  {
+   "rol": "ds",
+   "hacia": "Tech Lead",
+   "tiempo": "~3 → 4 años (cambio de carrera)",
+   "tecnicas": "Visión técnica end-to-end. Domina ágiles, cloud, MLOps/DevOps. Apoya retos técnicos del equipo.",
+   "blandas": "Liderazgo: delegación, desarrollo de personas, influencia, facilitador. Manejo de cliente.",
+   "contribucion": "Lidera preventas. Impulsa nuevas tecnologías y agilizadores en el equipo.",
+   "criterios": "Habilidades de liderazgo demostradas (delegación, desarrollo de personas, influencia). Manejo de cliente. Gestión con Agile Managers. Es un cambio de carrera hacia la gestión, no un ascenso obligatorio.",
+   "cambio": "De resolver con sus manos → a velar por los estándares técnicos del proyecto end-to-end y multiplicar al equipo."
+  },
+  {
+   "rol": "ds",
+   "hacia": "Specialist Lead",
+   "tiempo": "~4 → 5 años",
+   "tecnicas": "Decisiones estratégicas de plataformas y arquitecturas. Ingeniería de datos + ML/IA + DevOps a nivel experto.",
+   "blandas": "Liderazgo estratégico. Influencia a nivel de área y con clientes críticos.",
+   "contribucion": "Lidera preventas estratégicas. Define estandarización y promueve innovación que apalanca la estrategia.",
+   "criterios": "Resultados sostenidos. Planeación estratégica del área. Gestión de alcances, costos y rentabilidad. Decisiones estratégicas de tecnología. Promueve innovación y estandarización.",
+   "cambio": "De liderar un equipo técnico → a definir la estrategia técnica y de innovación del área de Data e IA."
+  },
+  {
+   "rol": "qa",
+   "hacia": "Semisenior",
+   "tiempo": "~1 → 2 años",
+   "tecnicas": "Diseña y automatiza pruebas completas sin supervisión.",
+   "blandas": "Reporta calidad con claridad. Colabora con desarrollo a tiempo.",
+   "contribucion": "Genera un agilizador de testing reutilizable.",
+   "criterios": "Casos completos. Automatización UI/API. Criterios de aceptación definidos.",
+   "cambio": "De ejecutar casos → a diseñar y automatizar la estrategia de pruebas de un proyecto."
+  },
+  {
+   "rol": "qa",
+   "hacia": "Senior",
+   "tiempo": "~2 → 3 años",
+   "tecnicas": "Estrategia de calidad y quality gates. Evalúa modelos de ML/IA.",
+   "blandas": "Referente de calidad. Presenta a cualquier audiencia.",
+   "contribucion": "Lidera preventas con calidad. Crea frameworks.",
+   "criterios": "Estrategia exitosa. Quality gates en CI/CD. Evaluación de modelos implementada.",
+   "cambio": "De automatizar pruebas → a diseñar la estrategia y los estándares de calidad."
+  },
+  {
+   "rol": "qa",
+   "hacia": "Tech Lead",
+   "tiempo": "~3 → 4 años (cambio de carrera)",
+   "tecnicas": "Visión de calidad de los proyectos. Procesos enterprise.",
+   "blandas": "Liderazgo y desarrollo de personas. Manejo de cliente.",
+   "contribucion": "Preventas y estandarización de frameworks.",
+   "criterios": "Gestión demostrada. Cultura de calidad. Cambio de carrera, no obligatorio.",
+   "cambio": "De referente de calidad → a responsable de la calidad de los proyectos del área."
+  },
+  {
+   "rol": "qa",
+   "hacia": "Specialist Lead",
+   "tiempo": "~4 → 5 años",
+   "tecnicas": "Estrategia de calidad a años.",
+   "blandas": "Influencia ejecutiva. Resultados sostenidos.",
+   "contribucion": "Innovación y preventas de calidad a nivel estratégico.",
+   "criterios": "Resultados sostenidos. Influencia C-level.",
+   "cambio": "De dirigir QA → a definir la estrategia de calidad de la organización."
+  },
+  {
+   "rol": "bi",
+   "hacia": "Semisenior",
+   "tiempo": "~1 → 2 años",
+   "tecnicas": "Dashboards adoptados. Modela datos correctamente. Domina su herramienta BI.",
+   "blandas": "Traduce preguntas vagas en análisis. Comunica con negocio.",
+   "contribucion": "Genera un agilizador de BI o da una charla.",
+   "criterios": "Dashboards adoptados. Modelado correcto. Traducción de preguntas de negocio.",
+   "cambio": "De construir según especificaciones → a diseñar soluciones desde la pregunta de negocio."
+  },
+  {
+   "rol": "bi",
+   "hacia": "Senior",
+   "tiempo": "~2 → 3 años",
+   "tecnicas": "Soluciones cross-área. Define métricas corporativas y capa semántica.",
+   "blandas": "Referente de negocio y técnico. Stakeholder management probado.",
+   "contribucion": "Elabora preventas. Crea frameworks de BI.",
+   "criterios": "Soluciones cross-área exitosas. Métricas corporativas definidas. Referente.",
+   "cambio": "De analista de un área → a arquitecto de la plataforma analítica y puente con negocio."
+  },
+  {
+   "rol": "bi",
+   "hacia": "Tech Lead",
+   "tiempo": "~3 → 4 años (cambio de carrera)",
+   "tecnicas": "Gobernanza analítica de proyectos. Gestión del delivery.",
+   "blandas": "Liderazgo, desarrollo de personas, change management.",
+   "contribucion": "Preventas con storytelling. Estandariza frameworks.",
+   "criterios": "Gestión demostrada. Cultura analítica. Cambio de carrera, no obligatorio.",
+   "cambio": "De resolver con sus manos → a construir la capacidad analítica de sus proyectos."
+  },
+  {
+   "rol": "bi",
+   "hacia": "Specialist Lead",
+   "tiempo": "~4 → 5 años",
+   "tecnicas": "Estrategia data-driven a años. Analytics en decisión ejecutiva.",
+   "blandas": "Influencia ejecutiva. Transformación cultural.",
+   "contribucion": "Innovación y preventas analíticas a nivel estratégico.",
+   "criterios": "Transformación medible. Influencia en decisiones ejecutivas.",
+   "cambio": "De liderar BI → a transformar cómo decide el área y la empresa."
+  }
+ ],
+ "NombresLideres": [
+  {
+   "rol": "de",
+   "tech_lead": "Engineer Tech Lead",
+   "specialist_lead": "Engineer Specialist Lead"
+  },
+  {
+   "rol": "do",
+   "tech_lead": "DevOps Tech Lead",
+   "specialist_lead": "DevOps Specialist Lead"
+  },
+  {
+   "rol": "ds",
+   "tech_lead": "AI Tech Lead",
+   "specialist_lead": "ML & AI Specialist Lead"
+  },
+  {
+   "rol": "qa",
+   "tech_lead": "QA Tech Lead",
+   "specialist_lead": "QA Specialist Lead"
+  },
+  {
+   "rol": "bi",
+   "tech_lead": "BI Tech Lead",
+   "specialist_lead": "BI Specialist Lead"
+  }
+ ],
+ "Flujos": [
+  {
+   "id": "de-ds",
+   "desde": "de",
+   "hacia": "ds",
+   "etiqueta": "datos limpios"
+  },
+  {
+   "id": "de-bi",
+   "desde": "de",
+   "hacia": "bi",
+   "etiqueta": "datos modelados"
+  },
+  {
+   "id": "ds-bi",
+   "desde": "ds",
+   "hacia": "bi",
+   "etiqueta": "predicciones · insights"
+  },
+  {
+   "id": "do-de",
+   "desde": "do",
+   "hacia": "de",
+   "etiqueta": "CI/CD · infra"
+  },
+  {
+   "id": "do-ds",
+   "desde": "do",
+   "hacia": "ds",
+   "etiqueta": "despliegue · MLOps"
+  },
+  {
+   "id": "qa-ds",
+   "desde": "qa",
+   "hacia": "ds",
+   "etiqueta": "validación"
+  }
+ ],
+ "Laterales": [
+  {
+   "desde": "de",
+   "hacia": "ds",
+   "nota": "Aporta dominio de datos e infraestructura; debe reforzar estadística, ML e IA."
+  },
+  {
+   "desde": "bi",
+   "hacia": "ds",
+   "nota": "Aporta conocimiento de negocio; debe reforzar Python, estadística y ML."
+  },
+  {
+   "desde": "de",
+   "hacia": "do",
+   "nota": "Aporta dominio de datos; debe reforzar automatización, IaC y observabilidad."
+  },
+  {
+   "desde": "ds",
+   "hacia": "do",
+   "nota": "Aporta modelos; debe reforzar MLOps, CI/CD e infraestructura como código."
+  }
+ ],
+ "Agile": [
+  {
+   "rol": "de",
+   "facilita": "Gestiona expectativas realistas con stakeholders. Protege el tiempo de trabajo profundo. Gestiona dependencias con Infra y Seguridad. Equilibra features nuevas vs. deuda técnica.",
+   "espera": "Estimaciones honestas (incluyendo incertidumbre). Escalación temprana de blockers. Visibilidad del estado de pipelines críticos. Participación activa en refinement.",
+   "cadencia": "Daily (15 min). Refinement semanal. Sprint planning quincenal. Retro quincenal. 1:1 quincenal.",
+   "friccion": "Urgencias de datos de negocio vs. trabajo de plataforma de largo plazo. El AM defiende la inversión en infraestructura."
+  },
+  {
+   "rol": "do",
+   "facilita": "Gestiona expectativas realistas sobre tiempos de automatización y estabilización. Protege ventanas de mantenimiento. Coordina con Seguridad y los demás equipos. Visibiliza el trabajo de plataforma.",
+   "espera": "Transparencia sobre riesgos de despliegue. Comunicación temprana de incidentes. Estimaciones de esfuerzo de automatización. Documentación de runbooks.",
+   "cadencia": "Daily (15 min). Revisión de incidentes semanal. Planning quincenal. Retro quincenal. Review de confiabilidad mensual.",
+   "friccion": "Presión por entregar rápido vs. estabilidad y seguridad. El AM equilibra velocidad y confiabilidad."
+  },
+  {
+   "rol": "ds",
+   "facilita": "Gestiona expectativas realistas sobre tiempos y resultados de ML/IA (demo ≠ producción; alucinaciones, costos, latencia). Adapta el marco ágil a la experimentación. Facilita acceso a datos vía Data Engineers.",
+   "espera": "Hipótesis claras antes de cada experimento. Criterios de éxito/abandono definidos. Timeboxing de exploraciones. Evals antes de prometer fechas. Comunicación de resultados negativos también.",
+   "cadencia": "Standup 3x/semana (trabajo profundo). Experiment/demo review semanal. Planning quincenal con objetivos, no tareas. Retro quincenal. Review de costos de IA mensual.",
+   "friccion": "La investigación y la IA no encajan en sprints rígidos; hype vs. realidad técnica. El AM usa objetivos de aprendizaje y traduce expectativas en ambas direcciones."
+  },
+  {
+   "rol": "qa",
+   "facilita": "Gestiona expectativas realistas sobre cobertura y tiempos de prueba. Protege el tiempo de testing dentro del sprint. Promueve shift-left (calidad desde el inicio). Da visibilidad de la deuda de calidad.",
+   "espera": "Criterios de aceptación claros desde el refinement. Reporte temprano de riesgos de calidad. Estimaciones de esfuerzo de prueba. Colaboración con desarrollo.",
+   "cadencia": "Daily (15 min). Definición de criterios en refinement semanal. Review de calidad por sprint. Retro quincenal.",
+   "friccion": "Presión por cerrar rápido vs. cobertura adecuada. El AM negocia el alcance de calidad mínimo aceptable."
+  },
+  {
+   "rol": "bi",
+   "facilita": "Gestiona expectativas realistas sobre tiempos de entrega. Filtra y prioriza el flujo constante de requests. Protege al equipo de la 'tiranía de lo urgente'. Negocia SLAs realistas.",
+   "espera": "Clasificación de requests (urgente/importante). Estimaciones rápidas. Feedback sobre carga de trabajo. Documentación de requerimientos recibidos.",
+   "cadencia": "Daily (15 min). Triage de requests 2x/semana. Delivery review semanal con stakeholders. Retro quincenal.",
+   "friccion": "Sobrecarga de pedidos ad-hoc que impide trabajo estratégico. El AM implementa intake y priorización transparente."
+  }
+ ],
+ "AgileSeniority": [
+  {
+   "nivel": "Junior",
+   "expectativa": "Autogestión de sus propias tareas. NO se espera que resuelva problemas de cada proyecto ni que sea transversal. Acompañamiento cercano.",
+   "color": "#64748b"
+  },
+  {
+   "nivel": "Semisenior",
+   "expectativa": "Autonomía en su alcance y apoyo puntual a otros. Empieza a aportar fuera de sus tareas, todavía con respaldo de un Senior.",
+   "color": "#48C1C1"
+  },
+  {
+   "nivel": "Senior",
+   "expectativa": "Transversalidad: ayuda a resolver problemas de varios proyectos. Buena comunicación y que levante la mano a tiempo. NO se le exige autonomía total.",
+   "color": "#4690B9"
+  },
+  {
+   "nivel": "Tech Lead",
+   "expectativa": "Resuelve de forma casi independiente y transversal. Es punto de apoyo del AM para destrabar al equipo completo.",
+   "color": "#4246B1"
+  },
+  {
+   "nivel": "Specialist Lead",
+   "expectativa": "Resolución autónoma y visión transversal total. Anticipa problemas a nivel de área y los resuelve con mínima intervención del AM.",
+   "color": "#4017AA"
+  }
+ ],
+ "RACI": [
+  {
+   "actividad": "Arquitectura de la plataforma de datos",
+   "de": "R",
+   "ds": "R",
+   "bi": "R",
+   "do": "R",
+   "qa": "C",
+   "agile": "I",
+   "lider": "R/A"
+  },
+  {
+   "actividad": "Calidad y gobernanza de datos",
+   "de": "R",
+   "ds": "R",
+   "bi": "R",
+   "do": "R",
+   "qa": "R",
+   "agile": "I",
+   "lider": "R/A"
+  },
+  {
+   "actividad": "Desarrollo de pipelines ETL/ELT",
+   "de": "A/R",
+   "ds": "C",
+   "bi": "I",
+   "do": "C",
+   "qa": "C",
+   "agile": "I",
+   "lider": "A"
+  },
+  {
+   "actividad": "Desarrollo de modelos ML / IA",
+   "de": "C",
+   "ds": "A/R",
+   "bi": "I",
+   "do": "C",
+   "qa": "C",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Experimentación y evaluación de modelos",
+   "de": "I",
+   "ds": "A/R",
+   "bi": "C",
+   "do": "I",
+   "qa": "R",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Features de IA generativa (RAG/LLMs)",
+   "de": "C",
+   "ds": "A/R",
+   "bi": "I",
+   "do": "C",
+   "qa": "C",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Despliegue de modelos (MLOps)",
+   "de": "C",
+   "ds": "R",
+   "bi": "I",
+   "do": "A/R",
+   "qa": "C",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "CI/CD e infraestructura como código",
+   "de": "C",
+   "ds": "C",
+   "bi": "I",
+   "do": "A/R",
+   "qa": "C",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Pruebas y aseguramiento de calidad",
+   "de": "C",
+   "ds": "C",
+   "bi": "C",
+   "do": "C",
+   "qa": "A/R",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Dashboards y métricas — desarrollo en proyecto",
+   "de": "C",
+   "ds": "C",
+   "bi": "A/R",
+   "do": "I",
+   "qa": "C",
+   "agile": "I",
+   "lider": "C"
+  },
+  {
+   "actividad": "Dashboards y métricas — definición de especialidad",
+   "de": "C",
+   "ds": "C",
+   "bi": "R",
+   "do": "I",
+   "qa": "I",
+   "agile": "I",
+   "lider": "A"
+  },
+  {
+   "actividad": "Definición de métricas de negocio",
+   "de": "I",
+   "ds": "C",
+   "bi": "R",
+   "do": "I",
+   "qa": "I",
+   "agile": "I",
+   "lider": "A"
+  },
+  {
+   "actividad": "Planificación de sprints y delivery",
+   "de": "C",
+   "ds": "C",
+   "bi": "C",
+   "do": "C",
+   "qa": "C",
+   "agile": "A/R",
+   "lider": "I"
+  },
+  {
+   "actividad": "Gestión de dependencias externas",
+   "de": "C",
+   "ds": "C",
+   "bi": "C",
+   "do": "C",
+   "qa": "C",
+   "agile": "A/R",
+   "lider": "I"
+  },
+  {
+   "actividad": "Priorización del backlog",
+   "de": "C",
+   "ds": "C",
+   "bi": "C",
+   "do": "C",
+   "qa": "C",
+   "agile": "R",
+   "lider": "A"
+  },
+  {
+   "actividad": "Preventas y alcance de nuevos proyectos",
+   "de": "C",
+   "ds": "R",
+   "bi": "C",
+   "do": "C",
+   "qa": "C",
+   "agile": "C",
+   "lider": "A/R"
+  },
+  {
+   "actividad": "Promociones y evaluación técnica",
+   "de": "C",
+   "ds": "C",
+   "bi": "C",
+   "do": "C",
+   "qa": "C",
+   "agile": "C",
+   "lider": "A/R"
+  }
+ ],
+ "TiposProyecto": [
+  {
+   "clave": "all",
+   "nombre": "Ver todo",
+   "flujos_activos": "de-ds,de-bi,ds-bi,do-de,do-ds,qa-ds",
+   "flujos_opcionales": ""
+  },
+  {
+   "clave": "chatbot",
+   "nombre": "Chatbot / LLM externo",
+   "flujos_activos": "de-ds,ds-bi,do-ds,qa-ds",
+   "flujos_opcionales": ""
+  },
+  {
+   "clave": "modelo",
+   "nombre": "Modelo propio en producción",
+   "flujos_activos": "de-ds,ds-bi,do-ds,qa-ds",
+   "flujos_opcionales": ""
+  },
+  {
+   "clave": "rag",
+   "nombre": "RAG corporativo",
+   "flujos_activos": "de-ds,ds-bi,do-ds,qa-ds",
+   "flujos_opcionales": ""
+  },
+  {
+   "clave": "analitica",
+   "nombre": "Analítica / Dashboard",
+   "flujos_activos": "de-ds,de-bi,ds-bi,qa-ds",
+   "flujos_opcionales": ""
+  },
+  {
+   "clave": "agentes",
+   "nombre": "Agentes SQL / IA",
+   "flujos_activos": "de-ds,de-bi,ds-bi,do-ds,qa-ds",
+   "flujos_opcionales": ""
+  }
+ ],
+ "Personas": [
+  {
+   "email": "carlos.gomez@empresa.com",
+   "nombre": "Carlos Gómez",
+   "rol": "de",
+   "nivel": "Semisenior",
+   "equipo": "Carlos Silva"
+  },
+  {
+   "email": "ana.perez@empresa.com",
+   "nombre": "Ana Pérez",
+   "rol": "ds",
+   "nivel": "Senior",
+   "equipo": "Carlos Silva"
+  },
+  {
+   "email": "lucia.rojas@empresa.com",
+   "nombre": "Lucía Rojas",
+   "rol": "bi",
+   "nivel": "Junior",
+   "equipo": "Carlos Silva"
+  },
+  {
+   "email": "mario.diaz@empresa.com",
+   "nombre": "Mario Díaz",
+   "rol": "do",
+   "nivel": "Senior",
+   "equipo": "Carlos Silva"
+  },
+  {
+   "email": "sofia.leon@empresa.com",
+   "nombre": "Sofía León",
+   "rol": "qa",
+   "nivel": "Semisenior",
+   "equipo": "Carlos Silva"
+  },
+  {
+   "email": "julian.ospina@empresa.com",
+   "nombre": "Julián Ospina",
+   "rol": "de",
+   "nivel": "Senior",
+   "equipo": "Daniela Vargas"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "nombre": "Ricardo Nieto",
+   "rol": "ds",
+   "nivel": "Semisenior",
+   "equipo": "Daniela Vargas"
+  },
+  {
+   "email": "tomas.herrera@empresa.com",
+   "nombre": "Tomás Herrera",
+   "rol": "bi",
+   "nivel": "Senior",
+   "equipo": "Daniela Vargas"
+  },
+  {
+   "email": "nicolas.prieto@empresa.com",
+   "nombre": "Nicolás Prieto",
+   "rol": "do",
+   "nivel": "Semisenior",
+   "equipo": "Daniela Vargas"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "nombre": "Felipe Duarte",
+   "rol": "qa",
+   "nivel": "Senior",
+   "equipo": "Daniela Vargas"
+  },
+  {
+   "email": "paula.cardenas@empresa.com",
+   "nombre": "Paula Cárdenas",
+   "rol": "de",
+   "nivel": "Junior",
+   "equipo": "Andrés Beltrán"
+  },
+  {
+   "email": "valeria.sanz@empresa.com",
+   "nombre": "Valeria Sanz",
+   "rol": "ds",
+   "nivel": "Junior",
+   "equipo": "Andrés Beltrán"
+  },
+  {
+   "email": "marcela.quintero@empresa.com",
+   "nombre": "Marcela Quintero",
+   "rol": "bi",
+   "nivel": "Semisenior",
+   "equipo": "Andrés Beltrán"
+  },
+  {
+   "email": "elena.cruz@empresa.com",
+   "nombre": "Elena Cruz",
+   "rol": "do",
+   "nivel": "Junior",
+   "equipo": "Andrés Beltrán"
+  },
+  {
+   "email": "andrea.molina@empresa.com",
+   "nombre": "Andrea Molina",
+   "rol": "qa",
+   "nivel": "Junior",
+   "equipo": "Andrés Beltrán"
+  }
+ ],
+ "Proyectos": [
+  {
+   "id": "p1",
+   "nombre": "Tablero Financiero 360 - Banco Andino",
+   "tipo": "analitica",
+   "cliente": "Banco Andino (ficticio)",
+   "descripcion": "Plataforma de dashboards financieros con métricas de cartera, riesgo y rentabilidad para la vicepresidencia financiera.",
+   "alcance": "Modelado dimensional, 8 dashboards en Power BI, capa semántica y catálogo de métricas. No incluye ML ni tiempo real.",
+   "am_nombre": "Carlos Silva",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p2",
+   "nombre": "Agente SQL de Autoservicio",
+   "tipo": "agentes",
+   "cliente": "Retail Nova (ficticio)",
+   "descripcion": "Agente de IA que responde preguntas de negocio en lenguaje natural consultando el data warehouse con SQL generado y validado.",
+   "alcance": "Agente con LLM + catálogo semántico, guardrails de consultas, evaluación de calidad de respuestas y monitoreo de costos. No incluye escritura de datos.",
+   "am_nombre": "Carlos Silva",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p6",
+   "nombre": "Data Warehouse Corporativo",
+   "tipo": "analitica",
+   "cliente": "Cementos Andes (ficticio)",
+   "descripcion": "Consolidación de ventas, producción e inventarios de 6 plantas en un único warehouse gobernado.",
+   "alcance": "Ingesta desde ERP y planta, modelo dimensional, políticas de calidad y diccionario de datos. No incluye migración del ERP.",
+   "am_nombre": "Carlos Silva",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p7",
+   "nombre": "Tablero de Operación Logística",
+   "tipo": "analitica",
+   "cliente": "Transportes Rivera (ficticio)",
+   "descripcion": "Visibilidad de flota, cumplimiento de entregas y costo por ruta para la gerencia de operaciones.",
+   "alcance": "Integración con GPS y órdenes de despacho, 5 tableros operativos y alertas por incumplimiento. Sin optimización de rutas.",
+   "am_nombre": "Carlos Silva",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p8",
+   "nombre": "Segmentación de Clientes Retail",
+   "tipo": "modelo",
+   "cliente": "Retail Nova (ficticio)",
+   "descripcion": "Segmentación de clientes por comportamiento de compra para dirigir campañas comerciales.",
+   "alcance": "Feature store de comportamiento, modelo de clustering, validación con negocio y tablero de activación. Sin integración al CRM.",
+   "am_nombre": "Carlos Silva",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p3",
+   "nombre": "RAG de Conocimiento Interno",
+   "tipo": "rag",
+   "cliente": "Interno DataKnow (ficticio)",
+   "descripcion": "Asistente que responde preguntas sobre la documentación interna (procesos, manuales, propuestas) usando RAG.",
+   "alcance": "Ingesta y chunking de documentos, embeddings, vector DB, pipeline de evaluación y despliegue interno. Sin datos de clientes.",
+   "am_nombre": "Daniela Vargas",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p5",
+   "nombre": "Modelo de Fuga de Clientes",
+   "tipo": "modelo",
+   "cliente": "Telco Horizonte (ficticio)",
+   "descripcion": "Modelo de ML propio que predice la probabilidad de fuga de clientes para priorizar campañas de retención.",
+   "alcance": "Feature engineering, entrenamiento y validación, despliegue con MLOps (CI/CD), monitoreo de drift y tablero de resultados.",
+   "am_nombre": "Daniela Vargas",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p9",
+   "nombre": "Detección de Fraude Transaccional",
+   "tipo": "modelo",
+   "cliente": "Banco Andino (ficticio)",
+   "descripcion": "Scoring en near-real-time de transacciones sospechosas para el equipo de riesgo.",
+   "alcance": "Ingesta en streaming, modelo supervisado + reglas, umbrales por segmento, monitoreo de falsos positivos. Sin bloqueo automático de tarjetas.",
+   "am_nombre": "Daniela Vargas",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p10",
+   "nombre": "Asistente RAG de Normativa",
+   "tipo": "rag",
+   "cliente": "Seguros Delta (ficticio)",
+   "descripcion": "Asistente que responde consultas sobre circulares y normativa del sector citando la fuente exacta.",
+   "alcance": "Ingesta de normativa, RAG con citación obligatoria, evaluación de groundedness y control de versiones documentales. Sin asesoría legal automatizada.",
+   "am_nombre": "Daniela Vargas",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p11",
+   "nombre": "Predicción de Demanda Agrícola",
+   "tipo": "modelo",
+   "cliente": "Agroexport del Valle (ficticio)",
+   "descripcion": "Pronóstico de demanda por producto y destino de exportación para planear cosecha y logística.",
+   "alcance": "Series de tiempo con variables climáticas y de precio, backtesting, tablero de pronóstico y reentrenamiento mensual.",
+   "am_nombre": "Daniela Vargas",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p4",
+   "nombre": "Chatbot de Atención al Cliente",
+   "tipo": "chatbot",
+   "cliente": "Seguros Delta (ficticio)",
+   "descripcion": "Chatbot con LLM externo para atención de primer nivel: preguntas frecuentes, estado de pólizas y enrutamiento a agentes humanos.",
+   "alcance": "Integración con API del LLM, prompts y guardrails, integración con el CRM y tablero de métricas de atención. No incluye fine-tuning.",
+   "am_nombre": "Andrés Beltrán",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p12",
+   "nombre": "Plataforma de Datos Lakehouse",
+   "tipo": "analitica",
+   "cliente": "Clínica Santa Fe (ficticio)",
+   "descripcion": "Lakehouse clínico-administrativo con datos anonimizados para analítica de ocupación y costos.",
+   "alcance": "Arquitectura medallón, anonimización, control de acceso por rol y capa analítica. Sin datos identificables de pacientes.",
+   "am_nombre": "Andrés Beltrán",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p13",
+   "nombre": "Chatbot de Soporte Interno TI",
+   "tipo": "chatbot",
+   "cliente": "Interno DataKnow (ficticio)",
+   "descripcion": "Primer nivel de soporte TI: accesos, incidencias frecuentes y guías internas, con escalamiento a la mesa de ayuda.",
+   "alcance": "Integración con la base de conocimiento y el sistema de tickets, guardrails y métricas de resolución. Sin acciones sobre infraestructura.",
+   "am_nombre": "Andrés Beltrán",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p14",
+   "nombre": "Automatización de Reportes Regulatorios",
+   "tipo": "analitica",
+   "cliente": "Banco Andino (ficticio)",
+   "descripcion": "Automatización de la generación y validación de reportes regulatorios que hoy se arman a mano.",
+   "alcance": "Pipelines de consolidación, reglas de validación, trazabilidad y generación de archivos en formato regulatorio. Sin envío al ente de control.",
+   "am_nombre": "Andrés Beltrán",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  },
+  {
+   "id": "p15",
+   "nombre": "Agente de Cotizaciones",
+   "tipo": "agentes",
+   "cliente": "Seguros Delta (ficticio)",
+   "descripcion": "Agente que arma cotizaciones preliminares de pólizas a partir de una conversación con el asesor comercial.",
+   "alcance": "Agente con herramientas de cálculo tarifario, validación de reglas de suscripción y registro de auditoría. La emisión sigue siendo humana.",
+   "am_nombre": "Andrés Beltrán",
+   "am_rol": "Facilita ceremonias Scrum, coordina el cronograma y es responsable de los entregables ante el cliente."
+  }
+ ],
+ "Asignaciones": [
+  {
+   "email": "carlos.gomez@empresa.com",
+   "proyecto_id": "p1",
+   "porcentaje": "25"
+  },
+  {
+   "email": "carlos.gomez@empresa.com",
+   "proyecto_id": "p2",
+   "porcentaje": "15"
+  },
+  {
+   "email": "carlos.gomez@empresa.com",
+   "proyecto_id": "p6",
+   "porcentaje": "20"
+  },
+  {
+   "email": "carlos.gomez@empresa.com",
+   "proyecto_id": "p7",
+   "porcentaje": "20"
+  },
+  {
+   "email": "carlos.gomez@empresa.com",
+   "proyecto_id": "p8",
+   "porcentaje": "20"
+  },
+  {
+   "email": "ana.perez@empresa.com",
+   "proyecto_id": "p2",
+   "porcentaje": "45"
+  },
+  {
+   "email": "ana.perez@empresa.com",
+   "proyecto_id": "p8",
+   "porcentaje": "55"
+  },
+  {
+   "email": "lucia.rojas@empresa.com",
+   "proyecto_id": "p1",
+   "porcentaje": "35"
+  },
+  {
+   "email": "lucia.rojas@empresa.com",
+   "proyecto_id": "p6",
+   "porcentaje": "35"
+  },
+  {
+   "email": "lucia.rojas@empresa.com",
+   "proyecto_id": "p7",
+   "porcentaje": "30"
+  },
+  {
+   "email": "mario.diaz@empresa.com",
+   "proyecto_id": "p2",
+   "porcentaje": "100"
+  },
+  {
+   "email": "sofia.leon@empresa.com",
+   "proyecto_id": "p1",
+   "porcentaje": "25"
+  },
+  {
+   "email": "sofia.leon@empresa.com",
+   "proyecto_id": "p6",
+   "porcentaje": "25"
+  },
+  {
+   "email": "sofia.leon@empresa.com",
+   "proyecto_id": "p7",
+   "porcentaje": "25"
+  },
+  {
+   "email": "sofia.leon@empresa.com",
+   "proyecto_id": "p8",
+   "porcentaje": "25"
+  },
+  {
+   "email": "julian.ospina@empresa.com",
+   "proyecto_id": "p5",
+   "porcentaje": "35"
+  },
+  {
+   "email": "julian.ospina@empresa.com",
+   "proyecto_id": "p9",
+   "porcentaje": "35"
+  },
+  {
+   "email": "julian.ospina@empresa.com",
+   "proyecto_id": "p11",
+   "porcentaje": "30"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "proyecto_id": "p3",
+   "porcentaje": "20"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "proyecto_id": "p5",
+   "porcentaje": "20"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "proyecto_id": "p9",
+   "porcentaje": "20"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "proyecto_id": "p10",
+   "porcentaje": "20"
+  },
+  {
+   "email": "ricardo.nieto@empresa.com",
+   "proyecto_id": "p11",
+   "porcentaje": "20"
+  },
+  {
+   "email": "tomas.herrera@empresa.com",
+   "proyecto_id": "p5",
+   "porcentaje": "35"
+  },
+  {
+   "email": "tomas.herrera@empresa.com",
+   "proyecto_id": "p9",
+   "porcentaje": "35"
+  },
+  {
+   "email": "tomas.herrera@empresa.com",
+   "proyecto_id": "p11",
+   "porcentaje": "30"
+  },
+  {
+   "email": "nicolas.prieto@empresa.com",
+   "proyecto_id": "p3",
+   "porcentaje": "50"
+  },
+  {
+   "email": "nicolas.prieto@empresa.com",
+   "proyecto_id": "p10",
+   "porcentaje": "50"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p3",
+   "porcentaje": "15"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p5",
+   "porcentaje": "15"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p9",
+   "porcentaje": "15"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p10",
+   "porcentaje": "15"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p11",
+   "porcentaje": "15"
+  },
+  {
+   "email": "felipe.duarte@empresa.com",
+   "proyecto_id": "p4",
+   "porcentaje": "20"
+  },
+  {
+   "email": "paula.cardenas@empresa.com",
+   "proyecto_id": "p12",
+   "porcentaje": "35"
+  },
+  {
+   "email": "paula.cardenas@empresa.com",
+   "proyecto_id": "p14",
+   "porcentaje": "35"
+  },
+  {
+   "email": "paula.cardenas@empresa.com",
+   "proyecto_id": "p15",
+   "porcentaje": "30"
+  },
+  {
+   "email": "valeria.sanz@empresa.com",
+   "proyecto_id": "p4",
+   "porcentaje": "35"
+  },
+  {
+   "email": "valeria.sanz@empresa.com",
+   "proyecto_id": "p13",
+   "porcentaje": "35"
+  },
+  {
+   "email": "valeria.sanz@empresa.com",
+   "proyecto_id": "p15",
+   "porcentaje": "30"
+  },
+  {
+   "email": "marcela.quintero@empresa.com",
+   "proyecto_id": "p12",
+   "porcentaje": "50"
+  },
+  {
+   "email": "marcela.quintero@empresa.com",
+   "proyecto_id": "p14",
+   "porcentaje": "50"
+  },
+  {
+   "email": "elena.cruz@empresa.com",
+   "proyecto_id": "p4",
+   "porcentaje": "35"
+  },
+  {
+   "email": "elena.cruz@empresa.com",
+   "proyecto_id": "p13",
+   "porcentaje": "35"
+  },
+  {
+   "email": "elena.cruz@empresa.com",
+   "proyecto_id": "p15",
+   "porcentaje": "30"
+  },
+  {
+   "email": "andrea.molina@empresa.com",
+   "proyecto_id": "p4",
+   "porcentaje": "25"
+  },
+  {
+   "email": "andrea.molina@empresa.com",
+   "proyecto_id": "p12",
+   "porcentaje": "25"
+  },
+  {
+   "email": "andrea.molina@empresa.com",
+   "proyecto_id": "p13",
+   "porcentaje": "25"
+  },
+  {
+   "email": "andrea.molina@empresa.com",
+   "proyecto_id": "p14",
+   "porcentaje": "25"
+  }
+ ]
+}

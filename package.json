@@ -1,0 +1,19 @@
+{
+  "name": "the-office-dk",
+  "version": "1.0.0",
+  "description": "Oficina Virtual Interactiva de DataKnow (DK) en 2D para el onboarding.",
+  "private": true,
+  "type": "module",
+  "license": "ISC",
+  "workspaces": [
+    "2D"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=2D",
+    "dev:2d": "npm run dev --workspace=2D",
+    "build": "npm run build --workspace=2D",
+    "build:2d": "npm run build --workspace=2D",
+    "preview": "npm run preview --workspace=2D",
+    "preview:2d": "npm run preview --workspace=2D"
+  }
+}
